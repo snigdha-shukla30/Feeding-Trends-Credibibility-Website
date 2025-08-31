@@ -1,33 +1,32 @@
-
 @import "tailwindcss";
 /* @import "tw-animate-css"; */
 
 .font-gambetta {
-  font-family: 'Gambetta', serif !important;
+  font-family: "Gambetta", serif !important;
 }
 
 .font-general {
-  font-family: 'General Sans', sans-serif !important;
+  font-family: "General Sans", sans-serif !important;
 }
 
 .font-gamberino {
-  font-family: 'Gamberino', serif !important;
+  font-family: "Gamberino", serif !important;
 }
 
-.font-plus{
-font-family: 'Plus Jakarta Sans', sans-serif;
+.font-plus {
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.font-zodiak{
-font-family: 'Zodiak', serif;
+.font-zodiak {
+  font-family: "Zodiak", serif;
 }
-
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --animate-aurora: aurora 60s linear infinite;
-   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -67,121 +66,149 @@ font-family: 'Zodiak', serif;
   --radius-xl: calc(var(--radius) + 4px);
 }
 
- @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(180deg);
-          }
-        }
-        @keyframes gradient-x {
-          0%,
-          100% {
-            background-size: 200% 200%;
-            background-position: left center;
-          }
-          50% {
-            background-size: 200% 200%;
-            background-position: right center;
-          }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        .animate-gradient-x {
-          animation: gradient-x 3s ease infinite;
-        }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
 
-        .hex-outer {
-          width: 140px;
-          height: 140px;
-          background: white;
-          border-radius: 14px;
-          padding: 8px;
-          clip-path: polygon(
-            25% 6%,
-            75% 6%,
-            100% 50%,
-            75% 94%,
-            25% 94%,
-            0% 50%
-          );
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-          position: relative;
-        }
+.hex-outer {
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 14px;
+  padding: 8px;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
-        .hex-outer::before {
-          content: "";
-          position: absolute;
-          inset: -2px;
-          background: linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.3),
-            transparent,
-            rgba(255, 255, 255, 0.3)
-          );
-          clip-path: polygon(
-            25% 6%,
-            75% 6%,
-            100% 50%,
-            75% 94%,
-            25% 94%,
-            0% 50%
-          );
-          z-index: -1;
-          border-radius: 16px;
-        }
+.hex-outer::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  z-index: -1;
+  border-radius: 16px;
+}
 
-        .hex-inner {
-          width: 100%;
-          height: 100%;
-          clip-path: polygon(
-            25% 6%,
-            75% 6%,
-            100% 50%,
-            75% 94%,
-            25% 94%,
-            0% 50%
-          );
-          border-radius: 10px;
-          color: white;
-          position: relative;
-          overflow: hidden;
-        }
+.hex-inner {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
 
-        .hex-inner::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent
-          );
-          transition: left 0.5s;
-        }
+.hex-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
 
-        .group:hover .hex-inner::before {
-          left: 100%;
-        }
+.group:hover .hex-inner::before {
+  left: 100%;
+}
 
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-4px);
-          }
-        }
-       
+@media (max-width: 640px) {
+  .animate-float {
+    animation: none;
+  }
 
+  /* Touch feedback */
+  .group:active {
+    transform: scale(0.95);
+  }
+
+  /* Smooth scrolling */
+  .overflow-hidden {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Reduce motion for better mobile performance */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Desktop styles - Full animations */
+@media (min-width: 641px) {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Hide scrollbar completely (for Webkit browsers like Chrome, Edge, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* for IE/Edge */
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
 
 :root {
   --radius: 0.625rem;
@@ -265,13 +292,15 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, * {
+html,
+body,
+* {
   user-select: none !important;
 }
-input, textarea {
+input,
+textarea {
   user-select: text !important;
 }
-
 
 @keyframes scroll {
   to {
