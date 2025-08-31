@@ -37,7 +37,7 @@ export default function AboutUsSection() {
                 ABOUT US
               </h2>
               <p className="text-lg mb-6 text-[#6B4C4C]">
-                Wee help you to never feel limited to pursue your dreams or ambition. Your dreams deserve more than likes
+                Weee help you to never feel limited to pursue your dreams or ambition. Your dreams deserve more than likes
                 & followers. They deserve momentum. No more waiting for the right network, stage, or tools.
               </p>
               <hr className="border-t border-gray-200 my-6" /> {/* Lighter border for light background */}
